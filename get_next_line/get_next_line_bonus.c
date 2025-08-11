@@ -49,7 +49,7 @@ char	*ft_stash_add(char *stash, int fd)
 	buffer = malloc(BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
-	while (!ft_strchr(stash) && bytes != 0)
+	while (!gnl_strchr(stash) && bytes != 0)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes == -1)
@@ -59,7 +59,7 @@ char	*ft_stash_add(char *stash, int fd)
 			return (NULL);
 		}
 		buffer[bytes] = '\0';
-		stash = ft_strjoin(stash, buffer);
+		stash = gnl_strjoin(stash, buffer);
 	}
 	free(buffer);
 	return (stash);
@@ -73,13 +73,13 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	stash[fd] = ft_stash_add(stash[fd], fd);
-	if (!ft_strlen(stash[fd]))
+	if (!gnl_strlen(stash[fd]))
 	{
 		free(stash[fd]);
 		return (NULL);
 	}
 	str = ft_putline(stash[fd]);
-	stash[fd] = ft_shift(stash[fd]);
+	stash[fd] = gnl_shift(stash[fd]);
 	return (str);
 }
 /* #include <stdio.h>

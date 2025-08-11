@@ -64,15 +64,15 @@ char	*gnl_strjoin(char *stash, char *buffer)
 	size_t	j;
 
 	if (!stash)
-		stash = ft_calloc(1, sizeof(char));
+		stash = gnl_calloc(1, sizeof(char));
 	if (!stash || !buffer)
 		return (NULL);
-	if (ft_strlen(stash) + ft_strlen(buffer) == 0)
+	if (gnl_strlen(stash) + gnl_strlen(buffer) == 0)
 	{
 		free(stash);
 		return (NULL);
 	}
-	joint = ft_calloc((ft_strlen(stash) + ft_strlen(buffer) + 1), sizeof(char));
+	joint = gnl_calloc((gnl_strlen(stash) + gnl_strlen(buffer) + 1), sizeof(char));
 	if (!joint)
 		return (NULL);
 	i = -1;
@@ -100,7 +100,7 @@ char	*gnl_shift(char *stash)
 		free(stash);
 		return (NULL);
 	}
-	str = malloc(ft_strlen(stash) - i + 1);
+	str = malloc(gnl_strlen(stash) - i + 1);
 	if (!str)
 		return (NULL);
 	while (stash[i++])
