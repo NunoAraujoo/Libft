@@ -12,7 +12,7 @@
 
 #include "get_next_line_bonus.h"
 
-void	*ft_calloc(size_t bytes, size_t size)
+void	*gnl_calloc(size_t bytes, size_t size)
 {
 	size_t			i;
 	unsigned char	*str;
@@ -29,7 +29,7 @@ void	*ft_calloc(size_t bytes, size_t size)
 	return (str);
 }
 
-int	ft_strchr(char *stash)
+int	gnl_strchr(char *stash)
 {
 	int	i;
 
@@ -45,7 +45,7 @@ int	ft_strchr(char *stash)
 	return (0);
 }
 
-int	ft_strlen(char *s)
+int	gnl_strlen(char *s)
 {
 	int	i;
 
@@ -57,7 +57,7 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char *stash, char *buffer)
+char	*gnl_strjoin(char *stash, char *buffer)
 {
 	char	*joint;
 	size_t	i;
@@ -85,7 +85,7 @@ char	*ft_strjoin(char *stash, char *buffer)
 	return (joint);
 }
 
-char	*ft_shift(char *stash)
+char	*gnl_shift(char *stash)
 {
 	int		i;
 	int		j;

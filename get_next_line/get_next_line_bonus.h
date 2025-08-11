@@ -24,11 +24,11 @@
 # endif
 
 char	*get_next_line(int fd);
-char	*ft_strjoin(char *line, char *buffer);
-char	*ft_shift(char *stash);
-int		ft_strlen(char *s);
-int		ft_strchr(char *stash);
-void	*ft_calloc(size_t bytes, size_t size);
+char	*gnl_strjoin(char *line, char *buffer);
+char	*gnl_shift(char *stash);
+int		gnl_strlen(char *s);
+int		gnl_strchr(char *stash);
+void	*gnl_calloc(size_t bytes, size_t size);
 char	*ft_putline(char *stash);
 char	*ft_stash_add(char *stash, int fd);
 
